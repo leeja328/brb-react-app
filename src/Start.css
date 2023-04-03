@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Nabla&family=Quicksand:wght@300;400;700&family=Titillium+Web:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Delicious+Handrawn&family=Nabla&family=Quicksand:wght@300;400;700&family=Rampart+One&family=Titillium+Web:wght@300;400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: beige;
+}
+
+
+.start {
+    text-align: center;
+    padding-top: 18%;
+    border: none;
+}
+
+
+#title {
+    font-size: 20vh;
+    font-family: 'Rampart One', cursive;
+    color: darkblue;
+
+}
+
+#start {
+    font-size: 4vh;
+    text-decoration: none;
+    color: darkred;
+    box-sizing: border-box;
+    font-family: 'Rampart One', cursive;
+
+}
+
+#start:hover {
+    font-size: 4.5vh;
+}
+
+.howto {
+    font-family: 'Rampart One', cursive;
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 830px){
+    .start {
+        text-align: center;
+        padding-top: 18%;
+        border: none;
+    }
+    
+    
+    #title {
+        font-size: 15vh;
+        font-family: 'Rampart One', cursive;
+        color: darkblue;
+    
+    }
+    
+    #start {
+        font-size: 2.5vh;
+        text-decoration: none;
+        color: darkred;
+        box-sizing: border-box;
+        font-family: 'Rampart One', cursive;
+    
+    }
+    
+    #start:hover {
+        font-size: 3vh;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+    .start {
+        text-align: center;
+        padding-top: 18%;
+        border: none;
+    }
+    
+    
+    #title {
+        font-size: 7.7vh;
+        font-family: 'Rampart One', cursive;
+        color: darkblue;
+    
+    }
+    
+    #start {
+        font-size: 1.8vh;
+        text-decoration: none;
+        color: darkred;
+        box-sizing: border-box;
+        font-family: 'Rampart One', cursive;
+    
+    }
+    
+    #start:hover {
+        font-size: 2vh;
+    }
+
+}

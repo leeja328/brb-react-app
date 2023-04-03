@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    padding: 5vh;
+    
+}
+
+#howto {
+    padding: 20px;
+}
+
+#about {
+    padding: 20px;
+}
