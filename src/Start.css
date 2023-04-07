@@ -10,7 +10,7 @@
 
 .start {
     text-align: center;
-    padding-top: 18%;
+    padding-top: 10%;
     border: none;
 }
 
@@ -31,13 +31,14 @@
 
 }
 
-#start:hover {
+/* #start:hover {
     font-size: 4.5vh;
-}
+} */
 
 .howto {
     font-family: 'Rampart One', cursive;
     text-decoration: none;
+    color: darkblue;
 }
 
 
@@ -66,9 +67,9 @@
     
     }
     
-    #start:hover {
+    /* #start:hover {
         font-size: 3vh;
-    }
+    } */
 
 }
 
@@ -96,8 +97,8 @@
     
     }
     
-    #start:hover {
+    /* #start:hover {
         font-size: 2vh;
-    }
+    } */
 
 }
