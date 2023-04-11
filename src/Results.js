@@ -9,9 +9,10 @@ function Results() {
 
     return (
         <>
-        <Link to="/" element={<Results />} id='home'><BiHomeAlt />Home</Link>
+        <Link to="/" element={<Results />} id='home1'><BiHomeAlt />Home</Link>
         <div className='a' id='results'>
             <h1>Here are your results:</h1>
+            <br></br>
             <h3>{location.state.Txt}</h3>
         </div>
         </>

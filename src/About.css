@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Delicious+Handrawn&family=Nabla&family=Quicksand:wght@300;400;700&family=Rampart+One&family=Roboto+Mono:wght@100&family=Secular+One&family=Titillium+Web:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Delicious+Handrawn&family=Nabla&family=Quicksand:wght@300;400;700&family=Rampart+One&family=Roboto+Mono:wght@100&family=Secular+One&family=Titillium+Web:wght@300;400;700&family=Trocchi&display=swap');
+
 .container {
     display: flex;
     padding: 5vh;
@@ -10,4 +13,17 @@
 
 #about {
     padding: 20px;
+}
+
+h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#home1 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    color: darkblue;
+    padding: 10px;
 }

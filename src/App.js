@@ -7,7 +7,7 @@ import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import { BsArrowRightCircleFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-
+import Timers from './timer'
 
 
 
@@ -59,10 +59,13 @@ function App() {
   }
 
   return (
+    
     <div className="App">
       {/* <button onClick={() => refreshPage()}>New Game</button> */}
+      <div className='header'>
+        <Link to="/" element={<App />} id='home'><BiHomeAlt />Home</Link><Timers id='timer'></Timers>
+      </div>
       
-      <Link to="/" element={<App />} id='home'><BiHomeAlt />Home</Link>
       <form onSubmit={onSubmit}>
         
       <h1 id="guess">{prompt}</h1>
@@ -75,10 +78,10 @@ function App() {
           <button><h5>Enter</h5></button>
           </div>
       </form>
-      <form onSubmit={onSubmit2} className='top'>
+      {/* <form onSubmit={onSubmit2} className='top'>
         <button id="results_button">Results<BsArrowRightCircleFill /></button>
         <h5 className='a' id="results"></h5>
-      </form>
+      </form> */}
       
       
     </div>

@@ -12,6 +12,16 @@
 
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.timer {
+  padding: 20px;
+}
+
 form {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
@@ -22,7 +32,6 @@ form {
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 10px;
   font-family: 'Roboto Mono', monospace;
   color: darkblue;
 }
