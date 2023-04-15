@@ -1,57 +1,61 @@
 import './App.css';
 import { useRef } from 'react';
-// import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BiHomeAlt } from 'react-icons/bi';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
-import { BsArrowRightCircleFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
-import Timers from './timer'
-
-
+import { RxTimer } from 'react-icons/rx';
 
 function App() {
-  const lst_of_acros = ['lol', 'rofl', 'brb', 'omg',]
+
+  const [count, setCount] = useState(0);
+  const [txt, setTxt] = useState('');
+  const lst_of_acros = ['lol', 'yolo', 'smh', 'lmk', 'rofl', 'brb', 'omg', 'Game Over - Press Enter'];
+  const lst_of_answers = ['laugh out loud'];
+  const [points, setPoints] = useState(0);
+
+  const [seconds, setSeconds] = useState(60);
+  
   const acroRef = useRef();
-  // let [count, useCount] = useState(0);
-  const [prompt, usePrompt] = useState(lst_of_acros[0]);
-  
+  const [prompt, setPrompt] = useState(lst_of_acros[count]);
   const navigate = useNavigate();
-
-  // let num = 0
-  let count = 0
-
-  function onSubmit2(e) {
-    e.preventDefault()
-    console.log(Txt)
-    document.getElementById('results').innerHTML = Txt
-  }
   
-  
-
+  //this is the function to add the inputted answers 
   function onSubmit(e) {
     e.preventDefault()
-    document.getElementById('guess').innerHTML = lst_of_acros[count + 1]
+    setPrompt(lst_of_acros[count + 1])
     if (count < lst_of_acros.length - 1) {
-      count += 1} 
-      else {
-        document.getElementById('guess').innerHTML = 'Game Over';
-        console.log('game over');
-        navigate('/Results',{state:{Txt}});
-        window.location = '/Results';
+      setCount(count + 1)
+      } else {
+        navigate('/Results',{state:{txt, points}});
       }
 
-    Txt += (`${lst_of_acros[count - 1]} - ${acroRef.current.value}\n`)
+    setTxt(txt + (`${lst_of_acros[count]} - ${acroRef.current.value}\n`))
+    
+    if (acroRef === lst_of_answers[count]) {
+      setPoints(points + 1)
+    }
 
     document.getElementById('user_guess').value = null;
     console.log(count)
+    console.log(txt)
+    console.log(points)
     
   }
 
-  
+  //this is the hook for the timer
+  useEffect(() => {
+    if (seconds === 0) {
+      navigate('/Results',{state:{txt}});
+    }
+    const intervalId = setInterval(() => {
+      setSeconds(seconds => seconds - 1);
+    }, 1000);
 
-  let Txt = " "
+    return () => clearInterval(intervalId);
+  }, [seconds, navigate]);
+  
   
   
   function refreshPage() {
@@ -63,27 +67,21 @@ function App() {
     <div className="App">
       {/* <button onClick={() => refreshPage()}>New Game</button> */}
       <div className='header'>
-        <Link to="/" element={<App />} id='home'><BiHomeAlt />Home</Link><Timers id='timer'></Timers>
+        <Link to="/" element={<App />} id='home'><BiHomeAlt />Home</Link>
+        <div id='timerlook'>
+          <RxTimer size={24}/>{seconds > 0 ? seconds : 0}
+        </div>
       </div>
-      
-      <form onSubmit={onSubmit}>
-        
-      <h1 id="guess">{prompt}</h1>
-      {/* <button onSubmit={onSubmit3}>Start</button> */}
-        
-        {/* <input id='user_guess' ref={acroRef}></input>
-        <button >Enter</button> */}
+      <div className='instructions'>
+        <h5>Type your best guess for each acronym below before time runs out!</h5>
+      </div>
+      <form onSubmit={onSubmit}>  
+        <h1 id="guess">{prompt}</h1>
         <TextField id="user_guess" label="type here" variant="filled" inputRef={acroRef} />
         <div className='enter_button'>
           <button><h5>Enter</h5></button>
-          </div>
+        </div>
       </form>
-      {/* <form onSubmit={onSubmit2} className='top'>
-        <button id="results_button">Results<BsArrowRightCircleFill /></button>
-        <h5 className='a' id="results"></h5>
-      </form> */}
-      
-      
     </div>
   );
 }

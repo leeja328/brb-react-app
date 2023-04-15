@@ -1,9 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Delicious+Handrawn&family=Nabla&family=Quicksand:wght@300;400;700&family=Rampart+One&family=Roboto+Mono:wght@100&family=Titillium+Web:wght@300;400;700&display=swap');
-
-#timerlook {
-    display: flex;
-    align-items: center;
-    font-family: 'Rampart One', cursive;
-    padding-left: 2px;
-    padding-right: 2px;
-}

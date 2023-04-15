@@ -12,6 +12,14 @@
 
 }
 
+#timerlook {
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: 'Roboto Mono', monospace;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -64,6 +72,9 @@ button {
 
 }
 
-#results_button {
-
+.instructions {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  padding-left: 20vh;
+  padding-right: 20vh;
 }

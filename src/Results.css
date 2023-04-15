@@ -2,13 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Delicious+Handrawn&family=Nabla&family=Quicksand:wght@300;400;700&family=Rampart+One&family=Titillium+Web:wght@300;400;700&display=swap');
 
 
-#results {
+.title {
     padding: 30px;
     text-align: center;
     font-family: 'Rampart One', cursive;
 }
 
+
+.results {
+    padding: 30px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
 .a {
     white-space: pre;
   }
+
+.points {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
 
