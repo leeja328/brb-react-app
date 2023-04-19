@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [txt, setTxt] = useState('');
   const lst_of_acros = ['lol', 'yolo', 'smh', 'lmk', 'rofl', 'brb', 'omg', 'Game Over - Press Enter'];
-  const lst_of_answers = ['laugh out loud'];
+  const lst_of_answers = ['laughoutloud', 'youonlyliveonce', 'shakingmyhead', 'letmeknow', 'rollingonthefloorlaughing', 'berightback', 'ohmygoodness'];
   const [points, setPoints] = useState(0);
 
   const [seconds, setSeconds] = useState(60);
@@ -32,15 +32,19 @@ function App() {
       }
 
     setTxt(txt + (`${lst_of_acros[count]} - ${acroRef.current.value}\n`))
-    
-    if (acroRef === lst_of_answers[count]) {
+
+    //this checks whether the inputted answer is correct
+    let new_answer1 = acroRef.current.value.toLowerCase();
+    const new_answer2 = new_answer1.replace(/\s/g, '');
+    console.log(new_answer2)
+    if (new_answer2 === lst_of_answers[count]) {
       setPoints(points + 1)
     }
 
     document.getElementById('user_guess').value = null;
     console.log(count)
     console.log(txt)
-    console.log(points)
+    console.log(points + "points")
     
   }
 
@@ -74,8 +78,10 @@ function App() {
       </div>
       <div className='instructions'>
         <h5>Type your best guess for each acronym below before time runs out!</h5>
+        
       </div>
       <form onSubmit={onSubmit}>  
+        <h5>&#40;{count + 1}&#47;{lst_of_acros.length}&#41;</h5>
         <h1 id="guess">{prompt}</h1>
         <TextField id="user_guess" label="type here" variant="filled" inputRef={acroRef} />
         <div className='enter_button'>

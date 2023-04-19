@@ -22,25 +22,22 @@
 
 }
 
-#start {
-    font-size: 4vh;
-    text-decoration: none;
-    color: darkred;
-    box-sizing: border-box;
-    font-family: 'Rampart One', cursive;
-
-}
-
-/* #start:hover {
-    font-size: 4.5vh;
-} */
-
 .howto {
     font-family: 'Rampart One', cursive;
     text-decoration: none;
     color: darkblue;
 }
 
+#button_start {
+    text-decoration: none;
+    font-size: 9vh;
+    color: darkred;
+}
+
+#button_start:active {
+    transform: scale(0.88);
+    animation-duration: 2s;
+}
 
 
 @media only screen and (max-width: 830px){
@@ -58,8 +55,8 @@
     
     }
     
-    #start {
-        font-size: 2.5vh;
+    #button_start {
+        font-size: 7vh;
         text-decoration: none;
         color: darkred;
         box-sizing: border-box;
@@ -88,8 +85,8 @@
     
     }
     
-    #start {
-        font-size: 1.8vh;
+    #button_start {
+        font-size: 3.8vh;
         text-decoration: none;
         color: darkred;
         box-sizing: border-box;

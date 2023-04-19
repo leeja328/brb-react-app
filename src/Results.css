@@ -10,9 +10,9 @@
 
 
 .results {
-    padding: 30px;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
+    white-space: pre;
 }
 
 .a {
@@ -24,3 +24,6 @@
     font-family: 'Roboto Mono', monospace;
 }
 
+#new1 {
+    text-align: center;
+}

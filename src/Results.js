@@ -18,14 +18,15 @@ function Results() {
         <div className="title">
           <h1>Here are your results:</h1>
         </div>
-          <br></br>
         <div className='results'>
           {txt ? <h3>{txt}</h3> : <p>No results found.</p>}
         </div>
         <br></br>
+        <br></br>
         <div className='points'>
           <h2>You got {points} points!</h2>
         </div>
+        <Link to="/App" element={<Results />}><button id='new1'>New Game!</button></Link>
       </>
     );
   }

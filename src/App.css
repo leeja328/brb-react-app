@@ -12,6 +12,15 @@
 
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.88);
+}
+
+
 #timerlook {
   display: flex;
   align-items: center;
@@ -77,4 +86,13 @@ button {
   text-align: center;
   padding-left: 20vh;
   padding-right: 20vh;
+}
+
+@media only screen and (max-width: 400px) {
+  .instructions {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    padding-left: 9vh;
+    padding-right: 9vh;
+  }
 }
