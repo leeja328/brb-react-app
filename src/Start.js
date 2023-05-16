@@ -5,11 +5,11 @@ import About from './About';
 
 function Start() {
     return (
-        <div className="start">
+        <form className="start">
             <h1 id='title'>AcroNames</h1>
             <Link to="/App" element={<App />} id='start'><button id='button_start'>- Start -</button></Link>
             <Link to="/About" element={<About />} className='howto'><h3>how to / about</h3></Link>
-        </div>
+        </form>
     );
 }
 

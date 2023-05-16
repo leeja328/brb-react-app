@@ -21,6 +21,10 @@ button:active {
 }
 
 
+#hint {
+  padding-bottom: 40px;
+}
+
 #timerlook {
   display: flex;
   align-items: center;

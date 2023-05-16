@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useState } from 'react-router-dom';
 import './Results.css';
 import { BiHomeAlt } from 'react-icons/bi';
 
@@ -8,6 +8,8 @@ function Results() {
     const txt = location.state ? location.state.txt : null;
     const points = location.state ? location.state.points : null;
     console.log(txt);
+    console.log(points);
+
   
     return (
       <>
@@ -24,9 +26,12 @@ function Results() {
         <br></br>
         <br></br>
         <div className='points'>
-          <h2>You got {points} points!</h2>
+          <h2 id="points_result">Total points: {points}</h2>
         </div>
-        <Link to="/App" element={<Results />}><button id='new1'>New Game!</button></Link>
+        <div className='footer'>
+        <Link to="/App" element={<Results />}><button id='new1'>New Game!</button></Link> 
+        </div>
+        
       </>
     );
   }
